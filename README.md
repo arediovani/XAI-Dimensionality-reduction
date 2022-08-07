@@ -22,7 +22,33 @@ Dimensionality Reduction methods can be diveded into 2 groups:
  - **Linear techniques** - This group of methods linearly project the data to lower dimensional space. They preserve global structure
  - **Non-Linear techniques** - Techniques preserve local neighborhood
 
-## Exploring the methods and doing experiments  
+## Exploring the methods and doing experiments 
+In this section we will have a closer look to the DR methods alongside with small snippet codes whith experiments to explain what is happening behind inside the method.
+Firstly before diving into the methods I will talk about the dataset for the experiments.
+The dataset I choose is called ["Palmer Penguins Dataset"](https://www.kaggle.com/code/parulpandey/penguin-dataset-the-new-iris/data)
+![](https://editor.analyticsvidhya.com/uploads/96124penguins.png)
+A sample of this dataset is as follows
+![](https://editor.analyticsvidhya.com/uploads/35133Screenshot%20(8).png)
+For pre processing steps we turn the nominal data into numerical categories, normalize the values and dropping any datapoint with null values.
+
 ### PCA 
 Principal Component analysis a a fairly old and common technique, it dates back to 1901. It is a linear technique. It finds data representation that retains the maximum **nonredundant** and **uncorrelated** information.
- The steps to 
+The steps to caluclate PCA are the following
+ 1. Substract mean
+ 2. Calculate covariance matrix
+ 3. Calculate Eigenvector Eigenvalue
+ 4. Forming a feature vector
+ 5. Deriving new data set
+
+using sklearn library we can easily use PCA whith the following:
+```
+pca = PCA(n_components=2)
+components = pca.fit_transform(data)
+```
+Which gives us the output 
+![](https://gcdnb.pbrd.co/images/2JlElaPov38o.png?o=1)
+We can clearly see that DR helped us visualize a high dimensional data into a 2D plot. Now the data tells us that there are 5 clusters of penguins and on each clusters there a distinction between the males and females.
+
+For my first experiment on helping understand PCA I would like to present how easily 
+
+
