@@ -11,6 +11,18 @@ For us humans it is impossible to imagine this many features. While there are hi
 In a machine learning task pipeline, dimensionality reduction can be used in the pre processing step or post. 
 We will discuss further what the difference is in both of these cases.
 A downside of dimensionality reduction is that we have to give up variance in the original data. Later we will discuss how can we choose the appropriate number of features we want. While this may seem like a big problem, dimensionality reduction brings us more "goodies". 
+- **Performance** : Obviously since we are removing the number of dimensions, less calculations have to be made, therefore faster processing time.
 - **Date Visualization** : Reducing the number of dimensions to 2 or 3 can help us plot the data points wich is very important for data visualization tasks.
 - **Mitigate overfitting** : When we have a large ammounts of features the model can become more easily overfitted. When we apply
+- **Multicollinearity** : ["Multicollinearity is a statistical concept where several independent variables in a model are correlated"](https://www.investopedia.com/terms/m/multicollinearity.asp) PCA (a method for DR)can eliminate multicollinearity between features.
+- **Averts from [Curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)** 
+- **Remove noise in data** : During the process of DR, unimportant data points will be removed.
+ 
+Dimensionality Reduction methods can be diveded into 2 groups:
+ - **Linear techniques** - This group of methods linearly project the data to lower dimensional space. They preserve global structure
+ - **Non-Linear techniques** - Techniques preserve local neighborhood
 
+## Exploring the methods and doing experiments  
+### PCA 
+Principal Component analysis a a fairly old and common technique, it dates back to 1901. It is a linear technique. It finds data representation that retains the maximum **nonredundant** and **uncorrelated** information.
+ The steps to 
