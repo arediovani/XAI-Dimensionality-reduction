@@ -1,0 +1,29 @@
+In a machine learning task pipeline, dimensionality reduction can be used in the pre processing step or post.<br>
+We will discuss further what the difference is in both of these cases.<br>
+A downside of dimensionality reduction is that we have to give up variance in the original data. Later we will discuss how can we choose the appropriate number of features we want. While this may seem like a big problem, dimensionality reduction brings us more “goodies”.</p>
+<ul>
+<li class="has-line-data" data-line-start="13" data-line-end="14"><strong>Performance</strong> : Obviously since we are removing the number of dimensions, less calculations have to be made, therefore faster processing time.</li>
+<li class="has-line-data" data-line-start="14" data-line-end="15"><strong>Date Visualization</strong> : Reducing the number of dimensions to 2 or 3 can help us plot the data points wich is very important for data visualization tasks.</li>
+<li class="has-line-data" data-line-start="15" data-line-end="16"><strong>Mitigate overfitting</strong> : When we have a large ammounts of features the model can become more easily overfitted. When we apply</li>
+<li class="has-line-data" data-line-start="16" data-line-end="17"><strong>Multicollinearity</strong> : <a href="https://www.investopedia.com/terms/m/multicollinearity.asp">“Multicollinearity is a statistical concept where several independent variables in a model are correlated”</a> PCA (a method for DR)can eliminate multicollinearity between features.</li>
+<li class="has-line-data" data-line-start="17" data-line-end="18"><strong>Averts from <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">Curse of dimensionality</a></strong></li>
+<li class="has-line-data" data-line-start="18" data-line-end="20"><strong>Remove noise in data</strong> : During the process of DR, unimportant data points will be removed.</li>
+</ul>
+<p class="has-line-data" data-line-start="20" data-line-end="21">Dimensionality Reduction methods can be diveded into 2 groups:</p>
+<ul>
+<li class="has-line-data" data-line-start="21" data-line-end="22"><strong>Linear techniques</strong> - This group of methods linearly project the data to lower dimensional space. They preserve global structure</li>
+<li class="has-line-data" data-line-start="22" data-line-end="24"><strong>Non-Linear techniques</strong> - Techniques preserve local neighborhood</li>
+</ul>
+<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="Exploring_the_methods_and_doing_experiments_24"></a>Exploring the methods and doing experiments</h2>
+<p class="has-line-data" data-line-start="25" data-line-end="26">In this section we will have a closer look to the DR methods alongside with small snippet codes whith experiments to explain what is happening behind inside the method.</p>
+<h3 class="code-line" data-line-start=26 data-line-end=27 ><a id="PCA_26"></a>PCA</h3>
+<p class="has-line-data" data-line-start="27" data-line-end="29">Principal Component analysis a a fairly old and common technique, it dates back to 1901. It is a linear technique. It finds data representation that retains the maximum <strong>nonredundant</strong> and <strong>uncorrelated</strong> information.<br>
+The steps to caluclate PCA are the following</p>
+<ol>
+<li class="has-line-data" data-line-start="29" data-line-end="30">Substract mean</li>
+<li class="has-line-data" data-line-start="30" data-line-end="31">Calculate covariance matrix</li>
+<li class="has-line-data" data-line-start="31" data-line-end="32">Calculate Eigenvector Eigenvalue</li>
+<li class="has-line-data" data-line-start="32" data-line-end="33">Forming a feature vector</li>
+<li class="has-line-data" data-line-start="33" data-line-end="35">Deriving new data set</li>
+</ol>
+
